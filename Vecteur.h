@@ -2,12 +2,16 @@
 // Created by Nora Belattar on 2025-09-18.
 //
 
-#ifndef LAB1_VECTEUR_H
-#define LAB1_VECTEUR_H
+#ifndef VECTEUR_H
+#define VECTEUR_H
 
 #include <cstddef>
 
 class Vecteur {
+    public:
+        Vecteur();
+        void inserer(size_t index, int nouveau);
+        size_t taille() const;
 
     private:
         int* adresse;
@@ -15,4 +19,4 @@ class Vecteur {
 };
 
 
-#endif //LAB1_VECTEUR_H
+#endif //VECTEUR_H
