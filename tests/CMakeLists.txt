@@ -1,6 +1,5 @@
 add_executable(
         mesTests
-        ${PROJECT_SOURCE_DIR}/Vecteur.cpp
         mesTests.cpp
 )
 

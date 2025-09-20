@@ -6,6 +6,9 @@ int main() {
         int x = 50;
         int * p = new int(666);
 
+        //Vecteur v;
+        //v.inserer(0,34);
+
         std::cout << x << std::endl;
         std::cout << &x << std::endl;
 

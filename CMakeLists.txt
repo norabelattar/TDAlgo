@@ -4,7 +4,6 @@ project(Lab1)
 set(CMAKE_CXX_STANDARD 14)
 
 add_executable(Lab1 main.cpp
-        Vecteur.cpp
         Vecteur.h)
 
 include(FetchContent)
