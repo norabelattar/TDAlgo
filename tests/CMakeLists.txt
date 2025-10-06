@@ -1,6 +1,9 @@
 add_executable(
         mesTests
         mesTests.cpp
+        tests.cpp
+        testsDigraphe.cpp
+        testsDigraphe.cpp
 )
 
 target_include_directories(mesTests PRIVATE ${PROJECT_SOURCE_DIR} )
