@@ -5,7 +5,8 @@ set(CMAKE_CXX_STANDARD 14)
 
 add_executable(Lab1 main.cpp
         Vecteur.h
-        Digraphe.h)
+        Digraphe.h
+        AlgorithmesDigraphes.h)
 
 include(FetchContent)
 FetchContent_Declare(

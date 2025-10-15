@@ -33,8 +33,10 @@ public:
     // size_t ariteEntree(const T& sommet) const;
     bool sommetExiste(const T& sommet) const;
     bool arcExiste(const T& depart, const T& arrivee) const;
+    std::unordered_map<T, double> sommetsAdjacents(const T &depart) const;
     // std::string toString() const;
     // void dijkstra(const T& depart) const;
+    const std::vector<T>& enumererSommets() const;
 private:
     size_t trouverNumeroDuSommet(const T &sommet) const;
     bool invariant() const;
@@ -79,6 +81,20 @@ bool Digraphe<T>::arcExiste(const T &depart, const T &arrivee) const {
     auto ndep = trouverNumeroDuSommet(depart);
     auto narr = trouverNumeroDuSommet(arrivee);
     return std::find(listes.at(ndep).begin(), listes.at(ndep).end(), narr) != listes.at(ndep).end();
+}
+
+template<typename T>
+std::unordered_map<T, double> Digraphe<T>::sommetsAdjacents(const T &depart) const {
+    assert(sommetExiste(depart));
+    std::unordered_map<T, double> voisins;
+    auto ndep = trouverNumeroDuSommet(depart);
+    for (auto arc: listes.at(ndep)) voisins.insert({index.at(arc.destination), arc.poids});
+    return voisins;
+}
+
+template<typename T>
+const std::vector<T>& Digraphe<T>::enumererSommets() const {
+    return index;
 }
 
 template<typename T>

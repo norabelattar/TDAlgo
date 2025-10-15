@@ -15,3 +15,4 @@ TEST(ListeDoublementChainee, inserer_lire) {
     l.inserer(0,42);
     EXPECT_EQ(42, l.lire(0));
 }
+
